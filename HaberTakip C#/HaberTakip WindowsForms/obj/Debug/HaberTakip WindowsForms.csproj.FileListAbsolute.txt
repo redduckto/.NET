@@ -1,0 +1,39 @@
+C:\Users\ONUR\Desktop\HaberTakip C#\Website Monitor\HaberTakip WindowsForms\bin\Debug\Haber.cs
+C:\Users\ONUR\Desktop\HaberTakip C#\Website Monitor\HaberTakip WindowsForms\bin\Debug\HaberTakip WindowsForms.exe.config
+C:\Users\ONUR\Desktop\HaberTakip C#\Website Monitor\HaberTakip WindowsForms\bin\Debug\HaberTakip WindowsForms.exe
+C:\Users\ONUR\Desktop\HaberTakip C#\Website Monitor\HaberTakip WindowsForms\bin\Debug\HaberTakip WindowsForms.pdb
+C:\Users\ONUR\Desktop\HaberTakip C#\Website Monitor\HaberTakip WindowsForms\bin\Debug\HtmlAgilityPack.dll
+C:\Users\ONUR\Desktop\HaberTakip C#\Website Monitor\HaberTakip WindowsForms\bin\Debug\HtmlAgilityPack.pdb
+C:\Users\ONUR\Desktop\HaberTakip C#\Website Monitor\HaberTakip WindowsForms\bin\Debug\HtmlAgilityPack.xml
+C:\Users\ONUR\Desktop\HaberTakip C#\Website Monitor\HaberTakip WindowsForms\obj\Debug\HaberTakip WindowsForms.csprojResolveAssemblyReference.cache
+C:\Users\ONUR\Desktop\HaberTakip C#\Website Monitor\HaberTakip WindowsForms\obj\Debug\HaberTakip_WindowsForms.MainForm.resources
+C:\Users\ONUR\Desktop\HaberTakip C#\Website Monitor\HaberTakip WindowsForms\obj\Debug\HaberTakip_WindowsForms.Kategoriler.resources
+C:\Users\ONUR\Desktop\HaberTakip C#\Website Monitor\HaberTakip WindowsForms\obj\Debug\HaberTakip_WindowsForms.Properties.Resources.resources
+C:\Users\ONUR\Desktop\HaberTakip C#\Website Monitor\HaberTakip WindowsForms\obj\Debug\HaberTakip WindowsForms.csproj.GenerateResource.Cache
+C:\Users\ONUR\Desktop\HaberTakip C#\Website Monitor\HaberTakip WindowsForms\obj\Debug\HaberTakip WindowsForms.exe
+C:\Users\ONUR\Desktop\HaberTakip C#\Website Monitor\HaberTakip WindowsForms\obj\Debug\HaberTakip WindowsForms.pdb
+C:\Users\ONUR\Desktop\Staj Dosyaları\Örnek Projeler\HaberTakip C#\Website Monitor\HaberTakip WindowsForms\bin\Debug\HaberTakip WindowsForms.exe.config
+C:\Users\ONUR\Desktop\Staj Dosyaları\Örnek Projeler\HaberTakip C#\Website Monitor\HaberTakip WindowsForms\obj\Debug\HaberTakip WindowsForms.exe
+C:\Users\ONUR\Desktop\Staj Dosyaları\Örnek Projeler\HaberTakip C#\Website Monitor\HaberTakip WindowsForms\obj\Debug\HaberTakip WindowsForms.pdb
+C:\Users\ONUR\Desktop\Staj Dosyaları\Örnek Projeler\HaberTakip C#\Website Monitor\HaberTakip WindowsForms\obj\Debug\HaberTakip WindowsForms.csprojResolveAssemblyReference.cache
+C:\Users\ONUR\Desktop\Staj Dosyaları\Örnek Projeler\HaberTakip C#\Website Monitor\HaberTakip WindowsForms\obj\Debug\HaberTakip_WindowsForms.MainForm.resources
+C:\Users\ONUR\Desktop\Staj Dosyaları\Örnek Projeler\HaberTakip C#\Website Monitor\HaberTakip WindowsForms\obj\Debug\HaberTakip_WindowsForms.Kategoriler.resources
+C:\Users\ONUR\Desktop\Staj Dosyaları\Örnek Projeler\HaberTakip C#\Website Monitor\HaberTakip WindowsForms\obj\Debug\HaberTakip WindowsForms.csproj.GenerateResource.Cache
+C:\Users\ONUR\Desktop\Staj Dosyaları\Örnek Projeler\HaberTakip C#\Website Monitor\HaberTakip WindowsForms\bin\Debug\Haber.cs
+C:\Users\ONUR\Desktop\Staj Dosyaları\Örnek Projeler\HaberTakip C#\Website Monitor\HaberTakip WindowsForms\bin\Debug\HaberTakip WindowsForms.exe
+C:\Users\ONUR\Desktop\Staj Dosyaları\Örnek Projeler\HaberTakip C#\Website Monitor\HaberTakip WindowsForms\bin\Debug\HaberTakip WindowsForms.pdb
+C:\Users\ONUR\Desktop\Staj Dosyaları\Örnek Projeler\HaberTakip C#\Website Monitor\HaberTakip WindowsForms\obj\Debug\HaberTakip_WindowsForms.Properties.Resources.resources
+C:\Users\ONUR\Desktop\Staj Dosyaları\Örnek Projeler\HaberTakip C#\HaberTakip WindowsForms\bin\Debug\HaberTakip WindowsForms.exe.config
+C:\Users\ONUR\Desktop\Staj Dosyaları\Örnek Projeler\HaberTakip C#\HaberTakip WindowsForms\obj\Debug\HaberTakip WindowsForms.exe
+C:\Users\ONUR\Desktop\Staj Dosyaları\Örnek Projeler\HaberTakip C#\HaberTakip WindowsForms\obj\Debug\HaberTakip WindowsForms.pdb
+C:\Users\ONUR\Desktop\Staj Dosyaları\Örnek Projeler\HaberTakip C#\HaberTakip WindowsForms\bin\Debug\Haber.cs
+C:\Users\ONUR\Desktop\Staj Dosyaları\Örnek Projeler\HaberTakip C#\HaberTakip WindowsForms\bin\Debug\HaberTakip WindowsForms.exe
+C:\Users\ONUR\Desktop\Staj Dosyaları\Örnek Projeler\HaberTakip C#\HaberTakip WindowsForms\bin\Debug\HaberTakip WindowsForms.pdb
+C:\Users\ONUR\Desktop\Staj Dosyaları\Örnek Projeler\HaberTakip C#\HaberTakip WindowsForms\obj\Debug\HaberTakip WindowsForms.csprojResolveAssemblyReference.cache
+C:\Users\ONUR\Desktop\Staj Dosyaları\Örnek Projeler\HaberTakip C#\HaberTakip WindowsForms\obj\Debug\HaberTakip_WindowsForms.MainForm.resources
+C:\Users\ONUR\Desktop\Staj Dosyaları\Örnek Projeler\HaberTakip C#\HaberTakip WindowsForms\obj\Debug\HaberTakip_WindowsForms.Kategoriler.resources
+C:\Users\ONUR\Desktop\Staj Dosyaları\Örnek Projeler\HaberTakip C#\HaberTakip WindowsForms\obj\Debug\HaberTakip_WindowsForms.Properties.Resources.resources
+C:\Users\ONUR\Desktop\Staj Dosyaları\Örnek Projeler\HaberTakip C#\HaberTakip WindowsForms\obj\Debug\HaberTakip WindowsForms.csproj.GenerateResource.Cache
+C:\Users\ONUR\Desktop\Staj Dosyaları\Örnek Projeler\HaberTakip C#\HaberTakip WindowsForms\bin\Debug\HtmlAgilityPack.dll
+C:\Users\ONUR\Desktop\Staj Dosyaları\Örnek Projeler\HaberTakip C#\HaberTakip WindowsForms\bin\Debug\HtmlAgilityPack.pdb
+C:\Users\ONUR\Desktop\Staj Dosyaları\Örnek Projeler\HaberTakip C#\HaberTakip WindowsForms\bin\Debug\HtmlAgilityPack.xml
