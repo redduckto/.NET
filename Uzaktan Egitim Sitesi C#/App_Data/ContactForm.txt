@@ -1,0 +1,9 @@
+﻿Merhaba,
+
+Bir kullanıcıdan mesajınız var!
+
+İsim: ##Name##
+E-mail: ##Email##
+Ev Telefonu: ##HomePhone##
+İş Telefonu: ##BussinessPhone##
+Yorum: ##Comments##

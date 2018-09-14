@@ -1,0 +1,343 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="MyWebSiteDatabaseModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="AnaBasliklar">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Baslik" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PdfFiles">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="AnaBaslikId" Type="int" Nullable="false" />
+          <Property Name="FileUrl" Type="varchar" MaxLength="500" Nullable="false" />
+          <Property Name="KonuBasliği" Type="varchar" MaxLength="200" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PdfYorumları">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="PdfId" Type="int" Nullable="false" />
+          <Property Name="UserName" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="Yorum" Type="varchar(max)" Nullable="false" />
+          <Property Name="Tarih" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="VideoUrls">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="AnaBaslikId" Type="int" Nullable="false" />
+          <Property Name="VideoLink" Type="varchar" MaxLength="200" Nullable="false" />
+          <Property Name="VideoBasliği" Type="varchar" MaxLength="200" Nullable="false" />
+        </EntityType>
+        <EntityType Name="VideoYorumlari">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="VideoId" Type="int" Nullable="false" />
+          <Property Name="UserName" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="Yorum" Type="varchar(max)" Nullable="false" />
+          <Property Name="Tarih" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_PdfFiles_ToAnaBasliklar">
+          <End Role="AnaBasliklar" Type="Self.AnaBasliklar" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="PdfFiles" Type="Self.PdfFiles" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AnaBasliklar">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="PdfFiles">
+              <PropertyRef Name="AnaBaslikId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Table_ToAnaBasliklar">
+          <End Role="AnaBasliklar" Type="Self.AnaBasliklar" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="VideoUrls" Type="Self.VideoUrls" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AnaBasliklar">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="VideoUrls">
+              <PropertyRef Name="AnaBaslikId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Table_ToPdfFiles">
+          <End Role="PdfFiles" Type="Self.PdfFiles" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="PdfYorumları" Type="Self.PdfYorumları" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PdfFiles">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="PdfYorumları">
+              <PropertyRef Name="PdfId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_VideoYorumlari_ToVideoUrls">
+          <End Role="VideoUrls" Type="Self.VideoUrls" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="VideoYorumlari" Type="Self.VideoYorumlari" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="VideoUrls">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="VideoYorumlari">
+              <PropertyRef Name="VideoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="MyWebSiteDatabaseModelStoreContainer">
+          <EntitySet Name="AnaBasliklar" EntityType="Self.AnaBasliklar" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PdfFiles" EntityType="Self.PdfFiles" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PdfYorumları" EntityType="Self.PdfYorumları" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="VideoUrls" EntityType="Self.VideoUrls" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="VideoYorumlari" EntityType="Self.VideoYorumlari" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_PdfFiles_ToAnaBasliklar" Association="Self.FK_PdfFiles_ToAnaBasliklar">
+            <End Role="AnaBasliklar" EntitySet="AnaBasliklar" />
+            <End Role="PdfFiles" EntitySet="PdfFiles" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Table_ToAnaBasliklar" Association="Self.FK_Table_ToAnaBasliklar">
+            <End Role="AnaBasliklar" EntitySet="AnaBasliklar" />
+            <End Role="VideoUrls" EntitySet="VideoUrls" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Table_ToPdfFiles" Association="Self.FK_Table_ToPdfFiles">
+            <End Role="PdfFiles" EntitySet="PdfFiles" />
+            <End Role="PdfYorumları" EntitySet="PdfYorumları" />
+          </AssociationSet>
+          <AssociationSet Name="FK_VideoYorumlari_ToVideoUrls" Association="Self.FK_VideoYorumlari_ToVideoUrls">
+            <End Role="VideoUrls" EntitySet="VideoUrls" />
+            <End Role="VideoYorumlari" EntitySet="VideoYorumlari" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="MyWebSiteDatabaseModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="AnaBasliklar">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Baslik" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="PdfFiles" Relationship="MyWebSiteDatabaseModel.FK_PdfFiles_ToAnaBasliklar" FromRole="AnaBasliklar" ToRole="PdfFile" />
+          <NavigationProperty Name="VideoUrls" Relationship="MyWebSiteDatabaseModel.FK_Table_ToAnaBasliklar" FromRole="AnaBasliklar" ToRole="VideoUrl" />
+        </EntityType>
+        <EntityContainer Name="MyWebSiteDatabaseEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="AnaBasliklars" EntityType="Self.AnaBasliklar" />
+          <EntitySet Name="PdfFiles" EntityType="MyWebSiteDatabaseModel.PdfFile" />
+          <AssociationSet Name="FK_PdfFiles_ToAnaBasliklar" Association="MyWebSiteDatabaseModel.FK_PdfFiles_ToAnaBasliklar">
+            <End Role="AnaBasliklar" EntitySet="AnaBasliklars" />
+            <End Role="PdfFile" EntitySet="PdfFiles" />
+          </AssociationSet>
+          <EntitySet Name="VideoUrls" EntityType="MyWebSiteDatabaseModel.VideoUrl" />
+          <AssociationSet Name="FK_Table_ToAnaBasliklar" Association="MyWebSiteDatabaseModel.FK_Table_ToAnaBasliklar">
+            <End Role="AnaBasliklar" EntitySet="AnaBasliklars" />
+            <End Role="VideoUrl" EntitySet="VideoUrls" />
+          </AssociationSet>
+          <EntitySet Name="VideoYorumlaris" EntityType="MyWebSiteDatabaseModel.VideoYorumlari" />
+          <AssociationSet Name="FK_VideoYorumlari_ToVideoUrls" Association="MyWebSiteDatabaseModel.FK_VideoYorumlari_ToVideoUrls">
+            <End Role="VideoUrl" EntitySet="VideoUrls" />
+            <End Role="VideoYorumlari" EntitySet="VideoYorumlaris" />
+          </AssociationSet>
+          <EntitySet Name="PdfYorumları" EntityType="MyWebSiteDatabaseModel.PdfYorumları" />
+          <AssociationSet Name="FK_Table_ToPdfFiles" Association="MyWebSiteDatabaseModel.FK_Table_ToPdfFiles">
+            <End Role="PdfFile" EntitySet="PdfFiles" />
+            <End Role="PdfYorumları" EntitySet="PdfYorumları" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="PdfFile">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="AnaBaslikId" Type="Int32" Nullable="false" />
+          <Property Name="FileUrl" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="KonuBasliği" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="AnaBasliklar" Relationship="MyWebSiteDatabaseModel.FK_PdfFiles_ToAnaBasliklar" FromRole="PdfFile" ToRole="AnaBasliklar" />
+          <NavigationProperty Name="PdfYorumları" Relationship="MyWebSiteDatabaseModel.FK_Table_ToPdfFiles" FromRole="PdfFile" ToRole="PdfYorumları" />
+        </EntityType>
+        <Association Name="FK_PdfFiles_ToAnaBasliklar">
+          <End Type="MyWebSiteDatabaseModel.AnaBasliklar" Role="AnaBasliklar" Multiplicity="1" />
+          <End Type="MyWebSiteDatabaseModel.PdfFile" Role="PdfFile" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AnaBasliklar">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="PdfFile">
+              <PropertyRef Name="AnaBaslikId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="VideoUrl">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="AnaBaslikId" Type="Int32" Nullable="false" />
+          <Property Name="VideoLink" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="VideoBasliği" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="AnaBasliklar" Relationship="MyWebSiteDatabaseModel.FK_Table_ToAnaBasliklar" FromRole="VideoUrl" ToRole="AnaBasliklar" />
+          <NavigationProperty Name="VideoYorumlaris" Relationship="MyWebSiteDatabaseModel.FK_VideoYorumlari_ToVideoUrls" FromRole="VideoUrl" ToRole="VideoYorumlari" />
+        </EntityType>
+        <Association Name="FK_Table_ToAnaBasliklar">
+          <End Type="MyWebSiteDatabaseModel.AnaBasliklar" Role="AnaBasliklar" Multiplicity="1" />
+          <End Type="MyWebSiteDatabaseModel.VideoUrl" Role="VideoUrl" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AnaBasliklar">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="VideoUrl">
+              <PropertyRef Name="AnaBaslikId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="VideoYorumlari">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="VideoId" Type="Int32" Nullable="false" />
+          <Property Name="UserName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Yorum" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="VideoUrl" Relationship="MyWebSiteDatabaseModel.FK_VideoYorumlari_ToVideoUrls" FromRole="VideoYorumlari" ToRole="VideoUrl" />
+          <Property Name="Tarih" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <Association Name="FK_VideoYorumlari_ToVideoUrls">
+          <End Type="MyWebSiteDatabaseModel.VideoUrl" Role="VideoUrl" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="MyWebSiteDatabaseModel.VideoYorumlari" Role="VideoYorumlari" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="VideoUrl">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="VideoYorumlari">
+              <PropertyRef Name="VideoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="PdfYorumları">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PdfId" Type="Int32" Nullable="false" />
+          <Property Name="UserName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Yorum" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Tarih" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="PdfFile" Relationship="MyWebSiteDatabaseModel.FK_Table_ToPdfFiles" FromRole="PdfYorumları" ToRole="PdfFile" />
+        </EntityType>
+        <Association Name="FK_Table_ToPdfFiles">
+          <End Type="MyWebSiteDatabaseModel.PdfFile" Role="PdfFile" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="MyWebSiteDatabaseModel.PdfYorumları" Role="PdfYorumları" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PdfFile">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="PdfYorumları">
+              <PropertyRef Name="PdfId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="MyWebSiteDatabaseModelStoreContainer" CdmEntityContainer="MyWebSiteDatabaseEntities">
+          <EntitySetMapping Name="AnaBasliklars">
+            <EntityTypeMapping TypeName="MyWebSiteDatabaseModel.AnaBasliklar">
+              <MappingFragment StoreEntitySet="AnaBasliklar">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Baslik" ColumnName="Baslik" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PdfFiles">
+            <EntityTypeMapping TypeName="MyWebSiteDatabaseModel.PdfFile">
+              <MappingFragment StoreEntitySet="PdfFiles">
+                <ScalarProperty Name="KonuBasliği" ColumnName="KonuBasliği" />
+                <ScalarProperty Name="FileUrl" ColumnName="FileUrl" />
+                <ScalarProperty Name="AnaBaslikId" ColumnName="AnaBaslikId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="VideoUrls">
+            <EntityTypeMapping TypeName="MyWebSiteDatabaseModel.VideoUrl">
+              <MappingFragment StoreEntitySet="VideoUrls">
+                <ScalarProperty Name="VideoBasliği" ColumnName="VideoBasliği" />
+                <ScalarProperty Name="VideoLink" ColumnName="VideoLink" />
+                <ScalarProperty Name="AnaBaslikId" ColumnName="AnaBaslikId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="VideoYorumlaris">
+            <EntityTypeMapping TypeName="MyWebSiteDatabaseModel.VideoYorumlari">
+              <MappingFragment StoreEntitySet="VideoYorumlari">
+                <ScalarProperty Name="Tarih" ColumnName="Tarih" />
+                <ScalarProperty Name="Yorum" ColumnName="Yorum" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="VideoId" ColumnName="VideoId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PdfYorumları">
+            <EntityTypeMapping TypeName="MyWebSiteDatabaseModel.PdfYorumları">
+              <MappingFragment StoreEntitySet="PdfYorumları">
+                <ScalarProperty Name="Tarih" ColumnName="Tarih" />
+                <ScalarProperty Name="Yorum" ColumnName="Yorum" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="PdfId" ColumnName="PdfId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

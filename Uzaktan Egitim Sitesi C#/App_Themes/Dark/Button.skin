@@ -1,0 +1,2 @@
+﻿
+<asp:Button CssClass="MyButton" runat="server" />

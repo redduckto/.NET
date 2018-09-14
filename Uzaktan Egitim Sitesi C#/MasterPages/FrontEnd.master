@@ -1,0 +1,91 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="FrontEnd.master.cs" Inherits="MasterPages_FrontEnd" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div id="PageWrapper">
+            <div id="Header">
+                <a href="~/Default.aspx" runat="server">
+                    <asp:Image ID="Logo" runat="server" ImageUrl="~/Images/Logo.png" />
+                </a>
+                <asp:LoginView ID="LoginView1" runat="server">
+                    <RoleGroups>
+                        <asp:RoleGroup Roles="Managers">
+                            <ContentTemplate>
+                                <asp:LoginName ID="headerLoginName" runat="server" FormatString="Hoşgeldiniz {0}" CssClass="LoggedInMessage" />
+                                <br />
+                                <a href="~/PasswordChange.aspx" runat="server" class="LoginStatus">Hesap Ayarları</a>
+                                <br />
+                                <a href="~/Management/Default.aspx" runat="server" class="LoginStatus">Manage Site</a>
+                                <br />
+                                <asp:LoginStatus ID="LoginStatus1" runat="server" CssClass="LoginStatus" />
+                            </ContentTemplate>
+                        </asp:RoleGroup>
+                    </RoleGroups>
+                    <LoggedInTemplate>
+                        <asp:LoginName ID="headerLoginName" runat="server" FormatString="Hoşgeldiniz {0}" CssClass="LoggedInMessage" />
+                        <br />
+                        <a href="~/PasswordChange.aspx" runat="server" class="LoginStatus">Hesap Ayarları</a>
+                        <br />
+                        <asp:LoginStatus ID="LoginStatus1" runat="server" CssClass="LoginStatus" />
+                    </LoggedInTemplate>
+                    <AnonymousTemplate>
+                        <asp:Login ID="Login1" CssClass="LoginBar" runat="server" CreateUserText="Üyelik oluşturun."
+                            CreateUserUrl="~/SignUp.aspx" FailureText="Giriş denemesi başarısız oldu. Lütfen tekrar deneyin."
+                            LoginButtonText="Giriş" PasswordLabelText="Şifre:"
+                            PasswordRequiredErrorMessage="Şifrenizi giriniz."
+                            RememberMeText="Beni hatırla" TitleText=""
+                            UserNameLabelText="Kullanıcı Adı:"
+                            UserNameRequiredErrorMessage="Kullanıcı adınızı giriniz."
+                            VisibleWhenLoggedIn="False"
+                            PasswordRecoveryText="Şifremi Unuttum"
+                            PasswordRecoveryUrl="~/ŞifremiUnuttum.aspx"
+                            Orientation="Horizontal" TextLayout="TextOnTop">
+                            <InstructionTextStyle CssClass="LoginBarInstruction" />
+                            <LoginButtonStyle CssClass="LoginBarButton" />
+                            <TextBoxStyle CssClass="LoginBarTextBox" />
+                        </asp:Login>
+                    </AnonymousTemplate>
+                </asp:LoginView>
+            </div>
+            <div id="MenuWrapper">
+                <asp:Menu ID="Menu1" CssClass="MainMenu" runat="server" DataSourceID="SiteMapDataSource1" Orientation="Horizontal" StaticEnableDefaultPopOutImage="False">
+                </asp:Menu>
+                <!-- "ShowStartingNode", "false" yapılmazsa önce Root'u gösterip diğer node'ları root'un üstüne
+                    gelip (hover) açtıktan sonra gösteriyor. -->
+                <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" ShowStartingNode="False" />
+            </div>
+            <div id="MainContent">
+                <asp:SiteMapPath ID="SiteMapPath1" runat="server">
+                    <NodeStyle Font-Size="Small"></NodeStyle>
+                </asp:SiteMapPath>
+                <br />
+                <br />
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+            <div id="Sidebar">
+                Tema Seçin:
+                <br />
+                <asp:DropDownList ID="ThemeList" runat="server" AutoPostBack="True" style="width:100px;" OnSelectedIndexChanged="ThemeList_SelectedIndexChanged">
+                    <asp:ListItem>Classic</asp:ListItem>
+                    <asp:ListItem>Dark</asp:ListItem>
+                </asp:DropDownList>
+                <br />
+                <br />
+                <UserControl:Banner runat="server" ID="Banner" />
+            </div>
+            <div id="Footer">
+                <a href="../About/Contact.aspx" runat="server">İletişim</a>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

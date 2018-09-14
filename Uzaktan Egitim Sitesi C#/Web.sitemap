@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+  <siteMapNode url="~/" title="Ana Sayfa"  description="Ana Sayfa">
+
+    <siteMapNode url="~/Default.aspx" title="Ana Sayfa"  description="Ana Sayfaya Dön" />
+    <siteMapNode title="ASP.Net"  description="ASP.Net Eğitimleri" >
+      <siteMapNode url="~/PdfFilesMenu.aspx?AnaBaslik=3" title="PDF Dosyaları" description="Pdf Eğitim Dosyaları" />
+      <siteMapNode url="~/VideoLinksMenu.aspx?AnaBaslik=3" title="Videolar" description="Videolu Eğitimler" />
+    </siteMapNode>
+    
+    <siteMapNode title="Windows Forms" description="Windows Forms Eğitimleri">
+      <siteMapNode url="~/PdfFilesMenu.aspx?AnaBaslik=5" title="PDF Dosyaları" description="PDF Eğitim Dosyaları" />
+      <siteMapNode url="~/VideoLinksMenu.aspx?AnaBaslik=5" title="Videolar" description="Videolu Eğitimler" />
+    </siteMapNode>
+
+    <siteMapNode title="Veri Yapıları" description="Veri Yapıları Eğitimleri" >
+      <siteMapNode url="~/PdfFilesMenu.aspx?AnaBaslik=4" title="PDF Dosyaları" description="Pdf Eğitim Dosyaları" />
+      <siteMapNode url="~/VideoLinksMenu.aspx?AnaBaslik=4" title="Videolar" description="Videolu Eğitimler" />
+    </siteMapNode>
+  </siteMapNode>
+</siteMap>

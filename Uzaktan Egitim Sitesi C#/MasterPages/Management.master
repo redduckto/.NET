@@ -1,0 +1,33 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Management.master.cs" Inherits="MasterPages_Management" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <div style="width: 200px; float: left;">
+                <a id="A0" href="~/Default.aspx" runat="server"><<< Return To the Web Site</a>                    
+                    <br />
+                <ul>
+                    <li><a id="A1" href="~/Management/Default.aspx" runat="server">Management Home</a></li>
+                    <li><a id="A2" href="~/Management/ManageRoles.aspx" runat="server">Manage Roles</a></li>
+                    <li><a id="A3" href="~/Management/ManageUsers.aspx" runat="server">Manage Users</a></li>
+                    <li><a id="A4" href="~/Management/ManageUsersInRoles.aspx" runat="server">Manage Users In Roles</a></li>
+                    <li><a id="A5" href="~/Management/ManagePdfFiles.aspx" runat="server">Manage Pdf Files</a></li>
+                    <li><a id="A6" href="~/Management/ManageVideoUrls.aspx" runat="server">Manage Video Urls</a></li>
+                </ul>
+            </div>
+            <div style="width: 750px; float: left;">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

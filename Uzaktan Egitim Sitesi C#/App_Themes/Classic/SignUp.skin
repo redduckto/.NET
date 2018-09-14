@@ -1,0 +1,2 @@
+﻿
+<asp:CreateUserWizard CreateUserButtonStyle-CssClass="MyButton" runat="server" />

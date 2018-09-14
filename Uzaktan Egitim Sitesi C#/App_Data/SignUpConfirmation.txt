@@ -1,0 +1,10 @@
+﻿Merhaba <%UserName%>,
+
+AlgoAkademi'ye kaydolduğun için teşekkür ederiz!
+
+Üyelik bilgilerin aşağıda bulunmaktadır.
+
+	Kullanıcı adı: <%UserName%>
+	Şifre: <%Password%>
+
+Görüşmek üzere!

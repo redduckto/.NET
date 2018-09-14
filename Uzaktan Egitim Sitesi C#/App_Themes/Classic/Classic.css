@@ -1,0 +1,280 @@
+﻿#Header {
+    background-image: url('Images/Header.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 85px;
+    width: 844px;
+}
+
+    #Header a:link {
+        color: wheat;
+    }
+
+    #Header a:visited {
+        color: aquamarine;
+    }
+
+    #Header .LoggedInMessage {
+        float: right;
+        color: white;
+        margin: 0px 5px 0px 0px;
+        display: table-cell;
+        bottom: 0px;
+    }
+
+#Logo {
+    width: 300px;
+    height: 60px;
+    float: left;
+    margin-top: 10px;
+    background-color: none;
+}
+
+.AccountControl {
+    font-size: medium;
+    margin: 30px 0px 0px 175px;
+    font-weight: bold;
+    color: darkslategrey;
+}
+
+    .AccountControl a:link {
+        font-size: medium;
+    }
+
+#PageWrapper {
+    padding: 0px;
+    width: 844px;
+    background-color: steelblue;
+    margin: auto;
+}
+
+#MenuWrapper {
+    width: 827px;
+    height: 20px;
+    font-weight: bold;
+    padding-left: 17px;
+    background-image: url(Images/Menu.jpg);
+}
+
+/* Menu'nün genel görünümü*/
+.MainMenu {
+    background-color: none;
+    width: 817px;
+}
+
+    /* Ana Menu item'larının (ilk seviyedeki item'lar) özellikleri */
+    .MainMenu > ul > li {
+        border-right: solid 1px;
+        border-color: aliceblue;
+    }
+
+    /* Tüm level'lardaki menu item'ları */
+    .MainMenu ul {
+        background-image: url(Images/Menu.jpg);
+    }
+
+    /* Tüm level'lardaki linkler */
+    .MainMenu a {
+        color: darkslategray;
+        width: 140px;
+        padding-left: 10px;
+    }
+
+        /* Tüm level'lardaki linklerin "hover" durumu */
+        .MainMenu a:hover {
+            background-color: steelblue;
+            color: white;
+        }
+
+        /* Tüm level'lardaki linklerin üzerine tıklanıp duruluncaki (mouseDown) durumu */
+        .MainMenu a:active {
+            background-color: deepskyblue;
+        }
+
+.ErrorMessage {
+    color: red;
+    font-size: medium;
+}
+
+#MainContent {
+    font-size: 0.8em;
+    width: 700px;
+    height: 100%;
+    min-height: 500px;
+    float: left;
+    border-left: 1px solid white;
+    border-right: 2px solid white;
+    background-image: url('Images/MainBackground.jpg');
+    padding: 10px;
+    border-right-color: gray;
+    border-left-color: gray;
+    font-size: medium;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+    #MainContent a:link {
+        font-size: large;
+    }
+
+#Sidebar {
+    font-size: 0.8em;
+    float: right;
+    color: White;
+    background-color: none;
+    width: 112px;
+    height: inherit;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 5px;
+}
+
+#İçerikListesi {
+    margin-left: 10px;
+}
+
+    #İçerikListesi a:link {
+        font-size: large;
+    }
+
+.AnaSayfaİçeriği {
+    background-color: ghostwhite;
+    border: solid 1px;
+    margin-top: 10px;
+    width: auto;
+    padding: 0px 5px 5px 20px;
+}
+
+.LargeFont {
+    font-size: large;
+}
+
+.Banner {
+    width: 100px;
+    height: auto;
+    background-color: none;
+}
+
+#Footer {
+    width: 844px;
+    clear: both;
+    height: 37px;
+    background-image: url(Images/Footer.jpg);
+    background-size: cover;
+    color: White;
+    text-align: center;
+    font-size: small;
+    line-height: 37px;
+}
+
+    #Footer a {
+        float: right;
+        margin: 2px 20px 0px 5px;
+        color: aquamarine;
+        font-size: medium;
+    }
+
+.LoginBar {
+    float: right;
+    font-family: Verdana;
+    background-color: none;
+    padding: 4px;
+    border-style: none;
+    font-size: x-small;
+    color: white;
+    height: inherit;
+    width: 450px;
+}
+
+.LoginBarInstruction {
+    color: #333333;
+    height: 16px;
+}
+
+.LoginStatus {
+    float: right;
+    margin-right: 5px;
+    margin-bottom: 0px;
+}
+
+.LoginBarTextBox {
+    font-size: small;
+}
+
+.PdfViewer {
+    width: inherit;
+    height: 450px;
+}
+
+#VideoWindow {
+    width: inherit;
+    height: 370px;
+}
+
+/* CommentSection'ın genel görünümü */
+#CommentSection {
+    margin-top: 100px;
+    width: inherit;
+    height: auto;
+}
+
+/* Görüntülenen yorumların genel görünümü */
+#ViewComments {
+    width: inherit;
+    height: auto;
+    margin-top: 10px;
+    background-color: white;
+    border-color: cadetblue;
+    border: solid 1px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: midnightblue; /* Text'lerin rengi */
+}
+
+    /* Yorumlarda kullanıcı isminin görünümü */
+    #ViewComments h3 {
+        font-size: small;
+        text-decoration: underline;
+        margin: 3px 0px 0px 3px;
+    }
+
+    /* Yorumlarda text'in görünümü */
+    #ViewComments p {
+        margin: 0px 0px 0px 3px;
+    }
+
+    /* Yorumlarda, yorum tarihinin görünümü */
+    #ViewComments #yorumTarihi {
+        margin: 1px 0px 0px 3px;
+        color: gray;
+    }
+
+.UyarıText {
+    font-size: large;
+    margin-left: 3px;
+}
+
+#İçerikListesi {
+    margin-left: 5px;
+}
+
+.YorumTextBox {
+    width: 640px;
+    height: 100px;
+}
+
+.MyButton {
+    font-size: small;
+    background-color: steelblue;
+    border-color: gray;
+    color: white;
+    font-weight: bold;
+}
+
+.PleaseWait {
+    height: 32px;
+    width: 500px;
+    background-image: url(Images/PleaseWait.gif);
+    background-repeat: no-repeat;
+    background-color: none;
+    padding-left: 40px;
+    line-height: 32px;
+}
